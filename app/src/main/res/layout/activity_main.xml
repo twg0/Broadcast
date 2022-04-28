@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#DDDDDD"
+    >
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="120dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:layout_marginTop="110dp"
+        >
+        <Button
+            android:id="@+id/kakao_login"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:text="카카오 간편 로그인"
+            android:textColor="#181600"
+            android:textAlignment="gravity"
+            android:backgroundTint="@color/kakao"
+            android:drawableLeft="@drawable/kakao_logo"/>
+    </LinearLayout>
+</LinearLayout>
