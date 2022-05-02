@@ -27,7 +27,7 @@ public class common extends AppCompatActivity implements View.OnClickListener{
         guard_data = findViewById(R.id.guard_data);
         if(trigger == 1)
             guard_data.setVisibility(View.VISIBLE); // 보호자일 때
-        else
+        else if(trigger == 0)
             guard_data.setVisibility(View.INVISIBLE); // 주민일 때
         logout = findViewById(R.id.logout);
         logout.setOnClickListener(this);

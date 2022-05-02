@@ -3,11 +3,13 @@ package com.example.broadcast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
@@ -23,6 +25,8 @@ public class broadcast_notice extends AppCompatActivity implements AdapterView.O
     String[] ti_data, con_data;
     ListView listView;
     AlertDialog alertDialog;
+    ImageButton imageButton;
+    int trigger;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +42,18 @@ public class broadcast_notice extends AppCompatActivity implements AdapterView.O
         ArrayAdapter adapter = new ArrayAdapter(this,R.layout.broadcast_content,R.id.simple_title,ti_data);
         listView.setOnItemClickListener(this);
         listView.setAdapter(adapter);
+
+        Intent intent = getIntent();
+        trigger = intent.getIntExtra("data",0);
+
+        imageButton = findViewById(R.id.plus);
+
+        if(trigger == 2){
+            imageButton.setVisibility(View.VISIBLE);
+        }
+        else {
+            imageButton.setVisibility(View.GONE);
+        }
     }
 
     @Override

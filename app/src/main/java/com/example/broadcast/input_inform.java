@@ -91,15 +91,15 @@ public class input_inform extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if(v == info_input){
             Intent intent;
-            if(flag == 0) {
+            if(flag == 0) { // 주민
                 intent = new Intent(getApplicationContext(), common.class);
                 intent.putExtra("data", 0);
             }
-            else if(flag == 1) {
+            else if(flag == 1) { // 보호자
                 intent = new Intent(getApplicationContext(), common.class);
                 intent.putExtra("data", 1);
             }
-            else {
+            else { // 마을 이장
                 intent = new Intent(getApplicationContext(),master.class);
                 intent.putExtra("data", 2);
             }
