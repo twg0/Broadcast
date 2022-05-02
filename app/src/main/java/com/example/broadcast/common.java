@@ -25,10 +25,13 @@ public class common extends AppCompatActivity implements View.OnClickListener{
         trigger = intent.getIntExtra("data",0);
 
         guard_data = findViewById(R.id.guard_data);
+        guard_data.setOnClickListener(this);
+
         if(trigger == 1)
             guard_data.setVisibility(View.VISIBLE); // 보호자일 때
         else if(trigger == 0)
             guard_data.setVisibility(View.INVISIBLE); // 주민일 때
+
         logout = findViewById(R.id.logout);
         logout.setOnClickListener(this);
 
@@ -51,6 +54,9 @@ public class common extends AppCompatActivity implements View.OnClickListener{
         } else if (view == person_info) {
             intent = new Intent(this,Person_info.class);
             intent.putExtra("data",trigger);
+            startActivity(intent);
+        } else if (view == guard_data) {
+            intent = new Intent(this,state_data.class);
             startActivity(intent);
         }
     }
