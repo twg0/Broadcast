@@ -54,7 +54,7 @@
             android:id="@+id/plus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@id/trash_bucket"
+            android:layout_alignParentRight="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:background="#95BCF2"
             android:layout_centerVertical="true"
@@ -62,6 +62,7 @@
             android:layout_marginRight="10dp"
             app:tint="#274E13"
             />
+        <!-- 방송 삭제 비활성화 -->
         <ImageButton
             android:id="@+id/trash_bucket"
             android:layout_width="wrap_content"
@@ -72,7 +73,8 @@
             android:background="#95BCF2"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
-            app:tint="#990000" />
+            app:tint="#990000"
+            android:visibility="gone"/>
     </RelativeLayout>
 
     <ListView
