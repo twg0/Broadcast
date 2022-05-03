@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 
 public class common extends AppCompatActivity implements View.OnClickListener{
 
-    Button guard_data,notice;
+    Button guard_data,notice,play_button;
     ImageButton person_info;
     ImageButton logout;
     int trigger = 0; // 주민(0)과 보호자(1) 구분 플래그
@@ -40,6 +40,9 @@ public class common extends AppCompatActivity implements View.OnClickListener{
 
         person_info = findViewById(R.id.person_info);
         person_info.setOnClickListener(this);
+
+        play_button = findViewById(R.id.play_button);
+        play_button.setOnClickListener(this);
     }
 
     @Override
@@ -57,6 +60,9 @@ public class common extends AppCompatActivity implements View.OnClickListener{
             startActivity(intent);
         } else if (view == guard_data) {
             intent = new Intent(this,state_data.class);
+            startActivity(intent);
+        } else if (view == play_button) {
+            intent = new Intent(this,broadcast_play.class);
             startActivity(intent);
         }
     }

@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class master extends AppCompatActivity implements View.OnClickListener{
 
-    Button notice;
+    Button notice,broadcast;
     Intent intent;
 
     @Override
@@ -20,6 +20,8 @@ public class master extends AppCompatActivity implements View.OnClickListener{
         notice = findViewById(R.id.notice);
         notice.setOnClickListener(this);
 
+        broadcast = findViewById((R.id.broadcast));
+        broadcast.setOnClickListener(this);
 
     }
 
@@ -29,6 +31,10 @@ public class master extends AppCompatActivity implements View.OnClickListener{
         if(view == notice) {
             intent = new Intent(this,broadcast_notice.class);
             intent.putExtra("data",2);
+            startActivity(intent);
+        }
+        else if(view == broadcast) {
+            intent = new Intent(this,broadcast_record.class);
             startActivity(intent);
         }
     }
