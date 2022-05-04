@@ -26,4 +26,17 @@
         <item>금일 비가 올 예정입니다. 널어둔 빨래를 모두 걷어 주시기 바랍니다.</item>
         <item>금일 날씨는 아주 맑습니다. 마을회관에 장이 열릴 예정이니 많은 참여 부탁드립니다.</item>
     </string-array>
+    <string-array name="person">
+        <item>김oo님</item>
+        <item>박oo님_단말기</item>
+        <item>최oo님</item>
+        <item>김oo님</item>
+        <item>정oo님</item>
+        <item>박oo님_단말기</item>
+        <item>고oo님</item>
+        <item>주oo님_단말기</item>
+        <item>김oo님</item>
+        <item>송oo님</item>
+        <item>이oo님</item>
+    </string-array>
 </resources>

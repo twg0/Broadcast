@@ -6,70 +6,65 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class broadcast_notice extends AppCompatActivity implements AdapterView.OnItemClickListener,View.OnClickListener{
+public class manage_person extends AppCompatActivity implements AdapterView.OnItemClickListener, View.OnClickListener {
 
-    String[] ti_data, con_data;
+    String[] ti_data;
     ListView listView;
-    AlertDialog alertDialog;
-    ImageButton imageButton;
+    ImageButton imageButton,trash_bucket;
     Intent intent;
     int trigger;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_broadcast_notice);
+        setContentView(R.layout.activity_manage_person);
 
-        listView = findViewById(R.id.broad_list);
+        listView = findViewById(R.id.person_list);
 
-        ti_data = getResources().getStringArray(R.array.title);
-        con_data = getResources().getStringArray(R.array.content);
+        ti_data = getResources().getStringArray(R.array.person);
 
         ArrayAdapter adapter = new ArrayAdapter(this,R.layout.broadcast_content,R.id.simple_title,ti_data);
         listView.setOnItemClickListener(this);
         listView.setAdapter(adapter);
 
-        intent = getIntent();
+        Intent intent = getIntent();
         trigger = intent.getIntExtra("data",0);
 
         imageButton = findViewById(R.id.plus);
         imageButton.setOnClickListener(this);
 
-        if(trigger == 2){
-            imageButton.setVisibility(View.VISIBLE);
-        }
-        else {
-            imageButton.setVisibility(View.GONE);
-        }
+        trash_bucket = findViewById(R.id.trash_bucket);
+        trash_bucket.setOnClickListener(this);
+
     }
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(ti_data[i] + " 방송 내용");
-        builder.setMessage(con_data[i]);
-        builder.setPositiveButton("확인",null);
-
-        alertDialog = builder.create();
-        alertDialog.show();
+        intent = new Intent(this,Person_info.class);
+        if(ti_data[i].contains("단말기")){
+            intent.putExtra("data",4);
+        } else {
+            intent.putExtra("data",3);
+        }
+        startActivity(intent);
     }
 
     @Override
     public void onClick(View view) {
         if(view == imageButton) {
-            intent = new Intent(this,broadcast_record.class);
+            intent = new Intent(this,manage_person_plus.class);
+            startActivity(intent);
+        } else if(view == trash_bucket) {
+            intent = new Intent(this,manage_person_delete.class);
             startActivity(intent);
         }
     }

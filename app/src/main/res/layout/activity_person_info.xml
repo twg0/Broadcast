@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+    <!--액션 바-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,12 +34,17 @@
             android:layout_marginRight="10dp"
             />
     </RelativeLayout>
+
+    <!--1번 정보-->
     <LinearLayout
+        android:id="@+id/layout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="50dp"
         android:layout_marginTop="50dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
+        <!--타이틀-->
         <TextView
             android:id="@+id/info_title"
             android:textSize="20dp"
@@ -47,6 +53,7 @@
             android:text="내 정보"
             android:layout_marginVertical="20dp"
             />
+        <!--내용-->
         <TextView
             android:id="@+id/info_name"
             android:layout_width="wrap_content"
@@ -54,16 +61,16 @@
             android:text="이름 : "
             />
         <TextView
+            android:id="@+id/info_device"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="단말기 : "
+            />
+        <TextView
             android:id="@+id/info_relation"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="관계 : "
-            />
-        <TextView
-            android:id="@+id/info_age"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="나이 : "
             />
         <TextView
             android:id="@+id/info_address"
@@ -90,46 +97,64 @@
             android:text="등록일 : "
             />
     </LinearLayout>
+
+    <!--2번 정보-->
     <LinearLayout
-        android:id="@+id/guard_info"
+        android:id="@+id/layout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="50dp"
+        android:layout_marginTop="50dp"
         android:orientation="vertical"
         >
+        <!--타이틀-->
         <TextView
-            android:id="@+id/info_guard_title"
+            android:id="@+id/info_title2"
+            android:textSize="20dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="ㅇㅇㅇ님(단말기)"
-            android:layout_marginTop="20dp"
+            android:text="내 정보"
+            android:layout_marginVertical="20dp"
             />
+        <!--내용-->
         <TextView
-            android:id="@+id/info_guard_age"
+            android:id="@+id/info_name2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="나이 : "
+            android:text="이름 : "
             />
         <TextView
-            android:id="@+id/info_guard_device"
+            android:id="@+id/info_device2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="단말기 : "
             />
         <TextView
-            android:id="@+id/info_guard_address"
+            android:id="@+id/info_relation2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="관계 : "
+            />
+        <TextView
+            android:id="@+id/info_address2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="주소 : "
             />
         <TextView
-            android:id="@+id/info_guard_phone"
+            android:id="@+id/info_phone2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="연락처 : "
             />
         <TextView
-            android:id="@+id/info_guard_regislation"
+            android:id="@+id/info_email2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="이메일 : "
+            />
+        <TextView
+            android:id="@+id/info_regislation2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="등록일 : "
@@ -137,9 +162,10 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
         <Button
-            android:id="@+id/guard_data"
+            android:id="@+id/withdrawl"
             android:text="회원 탈퇴하기"
             android:textStyle="bold"
             android:textSize="20dp"
@@ -151,6 +177,23 @@
             android:background="@drawable/round_rec_button"
             android:backgroundTint="#BABABA"
             android:foreground="?android:attr/selectableItemBackground"
+            android:paddingRight="50dp"
+            android:paddingLeft="50dp"
+            android:visibility="visible"
+            />
+        <Button
+            android:id="@+id/guard_data"
+            android:text="ㅇㅇㅇ님 상태 확인"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/round_rec_button"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:drawableRight="@drawable/ic_asterisk"
             android:paddingRight="50dp"
             android:paddingLeft="50dp"
             android:visibility="visible"
