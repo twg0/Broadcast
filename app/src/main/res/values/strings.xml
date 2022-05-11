@@ -39,4 +39,30 @@
         <item>송oo님</item>
         <item>이oo님</item>
     </string-array>
+    <string-array name="village">
+        <item>~~리</item>
+        <item>**리</item>
+        <item>!!리</item>
+        <item>##리</item>
+        <item>$$리</item>
+        <item>%%리</item>
+        <item>^^리</item>
+        <item>**리</item>
+        <item>((리</item>
+        <item>))리</item>
+        <item>{{리</item>
+    </string-array>
+    <string-array name="village_address">
+        <item>서울시 ~</item>
+        <item>대전시 ~</item>
+        <item>대구시 ~</item>
+        <item>대전시 ~</item>
+        <item>부산시 ~</item>
+        <item>인천시 ~</item>
+        <item>이천시 ~</item>
+        <item>충주시 ~</item>
+        <item>전주시 ~</item>
+        <item>광주시 ~</item>
+        <item>논산시 ~</item>
+    </string-array>
 </resources>

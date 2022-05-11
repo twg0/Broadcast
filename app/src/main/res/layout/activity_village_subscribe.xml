@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/actionbar"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_centerHorizontal="true"
+            android:paddingVertical="10dp"
+            android:text="회원가입"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@color/actionbar"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_logout" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/village_title"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/toolbar"
+        android:background="#95BCF2"
+        >
+        <TextView
+            android:id="@+id/village_title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="마을 목록"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"/>
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/village_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/village_title" />
+</RelativeLayout>

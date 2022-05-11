@@ -35,13 +35,40 @@
             />
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <Button
+            android:id="@+id/village_modify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="마을 변경"
+            android:layout_toLeftOf="@id/guard_setting"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/round_rec_button"
+            android:backgroundTint="#BABABA"
+            android:foreground="?android:attr/selectableItemBackground"
+            />
+        <Button
+            android:id="@+id/guard_setting"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="보호자 등록"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/round_rec_button"
+            android:backgroundTint="#BABABA"
+            android:foreground="?android:attr/selectableItemBackground"
+            />
+    </RelativeLayout>
     <!--1번 정보-->
     <LinearLayout
         android:id="@+id/layout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="50dp"
-        android:layout_marginTop="50dp"
         android:orientation="vertical"
         >
         <!--타이틀-->
@@ -89,12 +116,6 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="이메일 : "
-            />
-        <TextView
-            android:id="@+id/info_regislation"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="등록일 : "
             />
     </LinearLayout>
 
@@ -152,12 +173,6 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="이메일 : "
-            />
-        <TextView
-            android:id="@+id/info_regislation2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="등록일 : "
             />
     </LinearLayout>
     <LinearLayout
